@@ -1,3 +1,0 @@
-#John The Ripper
-
-> TODO
