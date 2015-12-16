@@ -1,0 +1,3 @@
+[submodule "learn/crowdsourced"]
+	path = learn/crowdsourced
+	url = https://github.com/KarmaHostage/EthicalHackerNotebook.git
