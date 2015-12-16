@@ -23,12 +23,17 @@ html {
     height: 100%;
 }
 
+blockquote {
+  border-left: 5px solid $kh-green;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+    color: $kh-green;
     margin: 0 0 35px;
     text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -38,11 +43,11 @@ h6 {
 
 p {
     margin: 0 0 25px;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.5;
     @media(min-width:768px) {
         margin: 0 0 35px;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.6;
     }
 }
@@ -56,7 +61,7 @@ div {
 }
 
 a {
-    color: $primary;
+    color: $kh-green;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -94,7 +99,7 @@ a {
         }
     }
     a {
-        color: $navbar-color;
+        color: $kh-green;
         @if $header-text-shadow{
             text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
         }

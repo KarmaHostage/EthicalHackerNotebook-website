@@ -150,10 +150,11 @@ social:
 # Sections shown in the index page
 
 pages_list:
-  About: 'about'
-  Blog: 'latest-post'
-  Timeline: 'timeline'
-  Contact: 'contact'
+  #Learn: 'learn'
+  #About: 'about'
+  #Blog: 'latest-post'
+  #Timeline: 'timeline'
+  #Contact: 'contact'
 
 # Exclusion list from the generated _site
 
@@ -171,3 +172,14 @@ sass:
 gems:
   - jekyll-paginate
   - jemoji
+
+# cyber security subjects, add to these if you want to add a feature on the website
+
+karmahostage:
+  subjects:
+    - name: "Tools"
+      md-file: "README.md"
+      title: "Tools-Title"
+    - name: "Cryptography"
+      md-file: "cryptography/README.md"
+      title: "Cryptography-title"

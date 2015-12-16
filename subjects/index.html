@@ -1,0 +1,12 @@
+---
+layout: default
+section-type: learn
+title: Learn
+sitemap:
+  priority: 1.0
+---
+<h3>Study Subjects</h3>
+
+{% for subject in site.karmahostage.subjects %}
+{{ subject.name }}
+{% endfor %}

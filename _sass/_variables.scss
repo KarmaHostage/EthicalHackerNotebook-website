@@ -1,8 +1,10 @@
 // Variables
 
 $primary: #00cdff;
-$dark: #000;
+$dark: #292929;
 $light: #fff;
+$kh-light: #BBBBBB;
+$kh-green: #0FBE7C;
 
 $navbar-text-shadow: true;
 $header-text-shadow: true;
@@ -13,4 +15,4 @@ $navbar-lg-collapse-background-color: $header-background-color;
 $navbar-lg-background: transparent;
 $navbar-sm-background-color: $navbar-lg-collapse-background-color;
 
-$social-buttons-color: $primary;
+$social-buttons-color: $kh-green;
