@@ -7,6 +7,14 @@ sitemap:
 ---
 <h3>Study Subjects</h3>
 
+
 {% for subject in site.karmahostage.subjects %}
-{{ subject.name }}
+  <div class="col-md-3" style="margin-top: 5px; margin-bottom: 5px;">
+    <a class="btn btn-lg btn-success btn-block btn-rounded" href="{{site.baseurl}}/subjects/{{ subject.url }}">
+      <i class="fa fa-{{ subject.icon }} fa-4x center"></i><br /> {{ subject.title }}<br>
+    </a>
+  </div>
+
 {% endfor %}
+
+<div class="row" style="margin-bottom: 10%;"></div>
