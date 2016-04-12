@@ -121,6 +121,17 @@ timeline-img: "/img/timeline/default.png"
 
 email: "quintendeswaef@gmail.com"
 
+################
+# Author Blurb #
+################
+
+# The author blurb goes underneath blog posts.
+# This works best when your author blurb image has a transparent background, or matches your site background color.
+
+# if the author_blurb is not set, then this feature is skipped
+author_blurb: "John Smith is an awesome person. He lives in Flatland, where he works on two-dimensional engineering projects. In his spare time, John likes to eat cotton candy."
+author_blurb_image: "/img/author.png"
+
 ##################
 # Social Buttons #
 ##################
@@ -147,8 +158,8 @@ pages_list:
   #Learn: 'learn'
   #About: 'about'
   #Blog: 'latest-post'
-  #Timeline: 'timeline'
-  #Contact: 'contact'
+  Timeline: 'timeline'
+  Contact: 'contact'
 
 # Exclusion list from the generated _site
 

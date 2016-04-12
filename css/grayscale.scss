@@ -14,8 +14,8 @@ body {
     width: 100%;
     height: 100%;
     font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: $light;
-    background-color: $dark;
+    color: $font-color;
+    background-color: $primary-color;
 }
 
 html {
@@ -24,7 +24,7 @@ html {
 }
 
 blockquote {
-  border-left: 5px solid $kh-green;
+  border-left: 5px solid $secondary-color;
 }
 
 h1,
@@ -33,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: $kh-green;
+    color: $secondary-color;
     margin: 0 0 35px;
     text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -41,13 +41,24 @@ h6 {
     letter-spacing: 1px;
 }
 
+/* Added in { Personal } */
+h4 {
+    a.category {
+        color: inherit;
+    }
+
+    a.tag {
+        font-size: 12px;
+    }
+}
+
 p {
     margin: 0 0 25px;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.5;
     @media(min-width:768px) {
         margin: 0 0 35px;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 1.6;
     }
 }
@@ -61,20 +72,20 @@ div {
 }
 
 a {
-    color: $kh-green;
+    color: $secondary-color;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     &:hover,
     &:focus {
         text-decoration: none;
-        color: darken($primary,20%);
+        color: darken($secondary-color,20%);
     }
 }
 
 .navbar-custom {
     margin-bottom: 0;
-    border-bottom: 1px solid rgba($light, 0.3);
+    border-bottom: 1px solid rgba($font-color, 0.3);
     text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: $navbar-sm-background-color;
@@ -99,7 +110,7 @@ a {
         }
     }
     a {
-        color: $kh-green;
+        color: $secondary-color;
         @if $header-text-shadow{
             text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
         }
@@ -112,20 +123,20 @@ a {
                 -moz-transition: background .3s ease-in-out;
                 transition: background .3s ease-in-out;
                 &:hover {
-                    /* color: rgba($light, 0.8); */
+                    /* color: rgba($font-color, 0.8); */
                     outline: none;
-                    background-color: rgba($light, 0.3);
+                    background-color: rgba($font-color, 0.3);
                 }
                 &:focus,
                 &:active {
                     outline: none;
-                    background-color: rgba($light, 0.3);
+                      background-color: rgba($font-color, 0.3);
                 }
             }
             &.active {
                 outline: none;
                 a {
-                    background-color: rgba($light, 0.3);
+                    background-color: rgba($font-color, 0.3);
                     &:hover {
                         color: $navbar-color;
                     }
@@ -144,7 +155,7 @@ a {
         &.top-nav-collapse {
             padding: 0;
             background: $navbar-lg-collapse-background-color;
-            border-bottom: 1px solid rgba($light, 0.3);
+            border-bottom: 1px solid rgba($font-color, 0.3);
         }
     }
 }
@@ -238,7 +249,7 @@ a {
         max-width: 100%;
         height: auto;
         margin: 0 auto;
-        border: 1px solid $light;
+        border: 1px solid $font-color;
     }
     /* Added in { Personal } */
     ul,
@@ -259,7 +270,16 @@ a {
       /* Override any img styles to ensure Emojis are displayed inline */
       margin: 0px !important;
       display: inline !important;
-      border: 1px solid $dark !important;
+      border: 1px solid $primary-color !important;
+    }
+
+    /* Added in { Personal } */
+    &#post {
+        div.author img {
+            border: 0px;
+            margin-bottom: 20px;
+            padding: 4px;
+        }
     }
 }
 
@@ -273,17 +293,17 @@ a {
 }
 
 .btn-default {
-    border: 1px solid $primary;
-    color: $primary;
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid $primary;
+    border: 1px solid $secondary-color;
     outline: 0;
     color: #000;
-    background-color: $primary;
+    background-color: $secondary-color;
 }
 
 /* Added in { Personal } */
@@ -312,6 +332,7 @@ ul.social-buttons li a {
 
 footer {
     padding: 50px 0;
+    text-align: center;
     p {
         margin: 0;
     }
@@ -320,13 +341,13 @@ footer {
 ::-moz-selection {
     text-shadow: none;
     background: #fcfcfc;
-    background: rgba($light, 0.2);
+    background: rgba($font-color, 0.2);
 }
 
 ::selection {
     text-shadow: none;
     background: #fcfcfc;
-    background: rgba($light, 0.2);
+    background: rgba($font-color, 0.2);
 }
 
 img::selection {
@@ -338,7 +359,7 @@ img::-moz-selection {
 }
 
 body {
-    -webkit-tap-highlight-color: rgba($light, 0.2);
+    -webkit-tap-highlight-color: rgba($font-color, 0.2);
 }
 
 /* Added in { Personal } for Typed Cursor in Header */
@@ -347,6 +368,11 @@ body {
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
+    font-size: 16px;
+    vertical-align: top;
+    @media(min-width:768px) {
+        font-size: 22px;
+    }
 }
 @keyframes blink{
     0% { opacity:1; }
@@ -391,10 +417,9 @@ body {
      position: absolute;
      background-color: rgba(0, 0, 0, 0.5);
      width: 100%;
-     height: 100%;
+     min-height: 100%;
      top: 0;
      right: 0;
-     bottom: 0;
      left: 0;
      z-index: 1;
       > div {
@@ -416,12 +441,12 @@ body {
  }
 
 .ok-btn {
-  background-color: $dark;
-  color: $primary;
+  background-color: $primary-color;
+  color: $secondary-color;
 }
 
  /* END Style for swipe instruction section */
 
 .fourofour {
-  border: 1px solid $dark !important;
+  border: 1px solid $primary-color !important;
 }
